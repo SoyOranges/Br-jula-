@@ -1,0 +1,33 @@
+BRÚJULA — Curiosidad diaria para iPhone
+
+QUÉ INCLUYE
+- App web instalable con estilo oscuro.
+- 100 curiosidades incluidas en la app; no necesita conexión para leerlas una vez cargada.
+- La curiosidad del día cambia según la fecha local.
+- Favoritos e historial guardados en localStorage del navegador.
+- Exportación e importación de copia JSON.
+- Caché offline mediante service worker en alojamiento HTTPS.
+
+IMPORTANTE SOBRE PRIVACIDAD
+Los favoritos e historial se guardan en el almacenamiento local de Safari en ese dispositivo. El código de la app contiene las 100 curiosidades, pero no tus datos personales. El alojamiento web verá las solicitudes normales al cargar la app; la app no envía tus favoritos a un servidor.
+Guarda copias de seguridad: los datos locales pueden perderse si borras los datos de Safari o eliminas la app web.
+No es una app nativa compilada de App Store; es una PWA (web app que se puede añadir a la pantalla de inicio). Para iPhone es la opción más práctica y gratuita.
+
+CÓMO PUBLICAR GRATIS CON GITHUB PAGES
+1. Crea una cuenta en GitHub si no tienes.
+2. Crea un repositorio nuevo. Para que GitHub Pages gratuito funcione, el repositorio normalmente debe ser público. No subas datos personales ni copias de seguridad a ese repositorio.
+3. Sube los archivos de esta carpeta a la raíz del repositorio.
+4. En el repositorio abre Settings > Pages.
+5. En “Build and deployment”, elige “Deploy from a branch”; selecciona “main” y “/(root)” y guarda.
+6. Espera a que GitHub publique la web. La dirección será parecida a https://TUUSUARIO.github.io/NOMBRE-DEL-REPOSITORIO/ .
+7. Abre esa dirección en Safari en el iPhone. Pulsa Compartir > Añadir a pantalla de inicio. Si aparece la opción “Abrir como app web”, actívala y pulsa Añadir.
+8. Abre BRÚJULA desde el icono de la pantalla de inicio. Para comprobar offline, abre la app al menos una vez con internet y luego prueba en modo avión.
+
+CÓMO USAR COPIAS
+En BRÚJULA > Privacidad y copias > Exportar copia de seguridad. Guarda el archivo JSON en Archivos/iCloud Drive o en otro lugar seguro. Para restaurar, usa “Elegir archivo JSON”.
+No subas el JSON a GitHub Pages.
+
+NOTAS
+- El contenido está preincluido: la app no descarga una curiosidad nueva de internet cada día. Selecciona una curiosidad distinta de la colección según el día del calendario.
+- Si quieres añadir o cambiar curiosidades, modifica la lista FACTS en app.js. No se requieren claves API.
+- GitHub Pages aloja el código públicamente. La privacidad de los favoritos se basa en que se guardan en el dispositivo y no se envían al alojamiento.

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#10131c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BRÚJULA">
+<link rel="manifest" href="./manifest.json">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<link rel="stylesheet" href="./style.css">
+<title>BRÚJULA · Una curiosidad al día</title>
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div class="brand-mark" aria-hidden="true">✳</div>
+    <div><div class="brand">BRÚJULA</div><div class="tagline">UN PEQUEÑO DESCUBRIMIENTO</div></div>
+    <div class="privacy-pill"><span></span> PRIVADO</div>
+  </header>
+
+  <main>
+    <section class="view" id="view-home">
+      <p class="date-label" id="today-label"></p>
+      <div class="hero">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="star star-one">✦</div><div class="star star-two">·</div><div class="star star-three">✧</div>
+        <div class="hero-icon">✳</div>
+      </div>
+      <div class="daily-heading">
+        <p class="eyebrow" id="daily-index">CURIOSIDAD DEL DÍA</p>
+        <h1>¿Sabías que…?</h1>
+      </div>
+      <article class="fact-card">
+        <div class="card-top"><span class="category" id="category">CIENCIA</span><span class="tiny-spark">✦</span></div>
+        <h2 id="fact-title">Cargando tu curiosidad…</h2>
+        <div class="gold-line"></div>
+        <p class="fact-detail" id="fact-detail"></p>
+      </article>
+      <button class="favorite-button" id="favorite-btn">♡ Guardar en favoritos</button>
+      <p class="daily-note">Una nueva curiosidad cada día. Vuelve mañana para descubrir otra.</p>
+      <p class="storage-status" id="storage-status">Guardado en este dispositivo</p>
+    </section>
+
+    <section class="view" id="view-favorites" hidden>
+      <p class="eyebrow page-eyebrow">TU COLECCIÓN</p>
+      <h1>Favoritos</h1>
+      <p class="section-intro">Las curiosidades que quieras conservar y volver a leer.</p>
+      <div id="favorites-list" class="saved-list"></div>
+      <div id="favorites-empty" class="empty-state" hidden><div class="empty-icon">♡</div><h2>Aún no has guardado nada</h2><p>Cuando una curiosidad te sorprenda, guárdala y aparecerá aquí.</p></div>
+    </section>
+
+    <section class="view" id="view-settings" hidden>
+      <p class="eyebrow page-eyebrow">TU ESPACIO PERSONAL</p>
+      <h1>Privacidad y copias</h1>
+      <div class="settings-card"><div class="setting-icon">◈</div><div><h2>Los datos se quedan aquí</h2><p>Los favoritos se guardan en el almacenamiento local de este navegador. No necesitas una cuenta.</p></div></div>
+      <div class="settings-card"><div class="setting-icon">↗</div><div><h2>Exportar una copia</h2><p>Guarda tus favoritos e historial en un archivo JSON para conservarlos o pasarlos a otro dispositivo.</p><button class="secondary-button" id="export-btn">Exportar copia de seguridad</button><p class="backup-message" id="backup-message" aria-live="polite"></p></div></div>
+      <div class="settings-card"><div class="setting-icon">↙</div><div><h2>Restaurar una copia</h2><p>Selecciona un archivo de copia de seguridad de BRÚJULA.</p><label class="secondary-button file-button">Elegir archivo JSON<input type="file" id="import-file" accept=".json,application/json"></label></div></div>
+      <div class="settings-card"><div class="setting-icon">♡</div><div><h2>Tu colección</h2><p id="backup-count">0 favoritos guardados</p></div></div>
+      <button class="danger-button" id="reset-btn">Borrar datos de este dispositivo</button>
+      <p class="small-print">Nota: si borras los datos del navegador o eliminas la app de la pantalla de inicio, podrías perder los datos locales. Conserva una copia de seguridad.</p>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Navegación principal">
+    <button class="nav-item active" data-view="home"><span class="nav-icon">✳</span><span>Hoy</span></button>
+    <button class="nav-item" data-view="favorites"><span class="nav-icon">♡</span><span>Favoritos</span></button>
+    <button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span><span>Privacidad</span></button>
+  </nav>
+</div>
+<script src="./app.js"></script>
+</body>
+</html>

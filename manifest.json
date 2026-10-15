@@ -1,0 +1,22 @@
+{
+  "name": "BRÚJULA · Una curiosidad al día",
+  "short_name": "BRÚJULA",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#10131c",
+  "theme_color": "#10131c",
+  "lang": "es",
+  "description": "Una curiosidad para descubrir cada día, con favoritos guardados en tu dispositivo.",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
